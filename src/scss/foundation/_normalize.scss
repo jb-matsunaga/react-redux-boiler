@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+// CSS最適化 -------------
+html, body {
+    margin:0;
+    padding:0;
+}
+html {
+    font-size:62.5%;
+    font-family:$font-family;
+}
+body {
+    color:$text-color;
+    line-height:$base-line-height;
+}
+div#container {
+    @include font-size(14,10);
+}
+main {
+    display:block;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    @include font-size(14);
+}
+p {
+    margin:0;
+}
+em,b,i,cite {
+    font-style:normal;
+}
+ul,ol,dl,dd,blockquote {
+    margin: 0;
+    padding:0;
+}
+ul li {
+    list-style-type:none;
+}
+ol {
+    list-style-type:none;
+}
+a {
+    color: $link-color;
+
+    &:visited {
+        color: $link-color;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration:none;
+    }
+}
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+img {
+    vertical-align:top;
+    border:none;
+}
+@if $rwd == true {
+    img {
+        max-width:100%;
+        height:auto;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+input,
+button,
+textarea {
+    @include font-size(14,14);
+    font-family: $font-family;
+    vertical-align:top;
+    padding: 0;
+}
+
+button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}

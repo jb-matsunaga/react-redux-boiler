@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* ==================================
+ * ボタン
+ * ================================ */
+
+.c_btn_normal-01 {
+    @include font-size(15);
+    display: inline-block;
+    border-radius: 2px;
+    padding: 7px 10px 6px;
+    background: #f246d2;
+    line-height: 1.2;
+    color: #fff;
+    transition: background .8s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: #c938ac;
+    }
+}

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+// ===========================
+// コンテンツの基本設定
+// ===========================
+
+// レスポンシブ
+$rwd : false;
+
+// break-point（レスポンシブの場合、設定必須）
+$tablet : 880px;
+$sp : 767px;
+
+// フォント
+$font-family : メイリオ, Meiryo, "ＭＳ Pゴシック", sans-serif;
+$font-family-en : Verdana, メイリオ, Meiryo, "ＭＳ Pゴシック", sans-serif;
+$base-font-size : 16;
+$base-line-height : 1.5;
+
+// カラー
+$text-color : #333;
+$link-color : #0c52c7;
+$link-hover-color : #0c52c7;
+$border-color-gray : #bababa;
+$border-color-blue : #3b5fba;
+
+
+// ===========================
+// インポート
+// ===========================
+
+// 基本設定
+@import "foundation/_mixin";
+@import "foundation/_extend";
+@import "foundation/_normalize";
+
+// フレーム
+@import "layout/_index";
+
+// モジュール
+@import "component/_list";
+@import "component/_btn";
+@import "component/_form";
+@import "component/_box";

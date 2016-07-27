@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// --------------------------
+// clearfix
+// メディアクエリ内のみ mixin を使用する
+// --------------------------
+%clearfix {
+    &:after {
+    content:'';
+    display:table;
+    clear:both;
+    }
+}

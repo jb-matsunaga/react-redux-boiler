@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+// --------------------------
+// clearfix
+// 通常はextendを使用する
+// メディアクエリ内のみ mixin を使用する
+// --------------------------
+@mixin clearfix {
+    &:after {
+    content:'';
+    display:table;
+    clear:both;
+    }
+}
+
+// --------------------------
+// font-size
+// @actual : 表示させたいフォントサイズ
+// @base : 元となるフォントサイズ
+// --------------------------
+@mixin font-size($actual, $base:$base-font-size) {
+    font-size: percentage($actual/$base);
+    font-size: ($actual / 10)+rem;
+}
+
+
+//--------------------------------------
+// mediaQueries
+// @size : 'tablet' or 'sp' or Number
+// tablet を指定すると、$tablet に指定したpx のメディアクエリを生成する。
+// sp を指定すると、$sp に指定したpx のメディアクエリを生成する。
+// px を直接指定することで任意のメディアクエリを生成する。
+//--------------------------------------
+@mixin rwd($size) {
+    @if $rwd == true {
+        @if $size == tablet {
+            @media screen and (max-width:$tablet){
+                @content;
+            }
+        } @else if $size == sp {
+            @media screen and (max-width:$sp){
+                @content;
+            }
+        } @else if type-of($size) == number {
+            @media screen and (max-width:$size){
+                @content;
+            }
+        }
+    }
+}

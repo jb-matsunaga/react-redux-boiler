@@ -1,0 +1,49 @@
+.c_box-01 {
+    margin-bottom: 40px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
+    background: #fff;
+
+    .box- {
+        &title {
+            @include font-size(18);
+            padding: 18px 18px 17px;
+            background: #57a8fb;
+            line-height: 1.1;
+            font-weight: normal;
+            color: #fff;
+        }
+        &content {
+            padding: 18px 18px 24px;
+
+            > *:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+
+.c_box_modal-01 {
+    width: 100%;
+    height: 100%;
+
+    .modal-{
+        &content {
+            position: fixed;
+            box-sizing: border-box;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+            padding: 18px 18px 17px;
+            width: 1024px;
+            background: #fff;
+            z-index: 2;
+        }
+        &layer {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .7);
+            z-index: 1;
+        }
+    }
+}
